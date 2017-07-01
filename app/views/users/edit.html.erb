@@ -1,0 +1,7 @@
+<%= form_for @user, url: user_path(@user), method: 'PUT', remote: true  do |f|%>
+    <%= render 'form', form: f %>
+
+    <div class="submit-field">
+      <%= f.submit 'Update', :class => 'btn btn-primary' %>
+    </div>
+<%end%>

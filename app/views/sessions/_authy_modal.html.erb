@@ -1,0 +1,32 @@
+<div class="modal fade" id="authy-modal">
+  <div class='modal-dialog'>
+    <div class="modal-content">
+      <div class='modal-header'>
+        <h4 class='modal-title'>We require 2 Factors Authentication</h4>
+      </div>
+      <div class='modal-body auth-token'>
+        <p>Please enter your Token</p>
+        <%= form_tag authy_verify_path do %>
+          <div class='form-group'>
+            <label class="col-md-3 control-label" for="token">Authy Token</label>
+            <div class='col-md-8'>
+              <input type="text" name="token" id="authy-token" ng-model="token" value="" class="form-control" autocomplete="off" />
+            </div>
+          </div>
+          <a value="Verify" class="btn btn-default" href="#" ng-click="cancel()">Cancel</a>
+          <input type="submit" name="commit" value="Verify" class="btn btn-success" ng-click="verifyToken(token)" />
+        <% end -%>
+        <hr>
+        <%= form_tag authy_send_token_path , :id => 'sms_token_form' do %>
+          <button type="submit" class="btn">Send code via SMS</button>
+            <span id="sending-sms"> We are sending your token via SMS! Please check your phone. </span>
+        <% end -%>
+        <hr>
+        <%= form_tag authy_send_token_phone_call_path , :id => 'phone_call_token_form' do %>
+            <button type="submit" class="btn">Send code via Phone call</button>
+            <span id="sending-phone"> We are calling you! Please check your phone. </span>
+        <% end -%>
+      </div>
+    </div>
+  </div>
+</div>

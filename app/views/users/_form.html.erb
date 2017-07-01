@@ -1,0 +1,26 @@
+<div class="form-group">
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name , class: "form-control"%>
+</div>
+
+<div class="form-group">
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name , class: "form-control"%>
+</div>
+
+<div class="form-group">
+  <%= form.label :email, "Enter Your E-mail Address:" %>
+  <%= form.email_field :email, class: "form-control", placeholder: "Address@gmail.com" %>
+</div>
+<div class="form-group">
+  <%= form.label :password, "Enter a password:" %>
+  <%= form.password_field :password, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= form.label :country_code %>
+  <%= form.text_field :country_code, class: "form-control", id: "authy-countries" %>
+</div>
+<div class="form-group">
+  <%= form.label :phone %>
+  <%= form.text_field :phone, class: "form-control", id: "authy-cellphone" %>
+</div>
