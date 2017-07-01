@@ -24,7 +24,11 @@ Whilst the purpose of this code test is to display your abilities, it is also an
 
 - You should use the Pundit (https://github.com/elabs/pundit) gem for Authorisation and ensure that all routes/actions are authorised.
 
-- To use Authy you will need API keys, please use the following keys.
+- To use Authy you will need API keys, please use the following keys: 'Ef4FOZcWLOEuvR5HDwD2UF024sj3942y'
+
+## Submission
+
+- Please clone a copy of this repository and create a new branch with your name. Please push this new branch to the repository when finished.
 
 ## Rules
 
